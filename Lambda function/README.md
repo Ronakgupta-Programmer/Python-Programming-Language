@@ -1,0 +1,1 @@
+This Python console application demonstrates lambda functions via a menu, allowing users to add numbers, filter evens, square integers, sum lists, sort names, concatenate strings, check positivity, generate cubes, and increment values. It showcases the efficiency of functional programming in Python.
