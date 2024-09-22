@@ -1,0 +1,1 @@
+This Python console application showcases exception handling techniques. Users can select from ZeroDivisionError, ValueError, FileNotFoundError, and TypeError to see corresponding handling logic. Each error is demonstrated in separate functions, with errors logged to a file for tracking, making it a useful resource for learning Exception Handling.

@@ -1,1 +1,0 @@
-A console-based Python application that allows users to interactively explore and perform operations on various data structures, including lists, tuples, sets, dictionaries, stacks, queues, linked lists, and binary trees. Features a user-friendly menu for basic operations and error handling.
