@@ -208,7 +208,7 @@ def main():
             max_number = StaticExamples.find_max(numbers)
             print(f"The maximum number in the list is: {max_number}")
         elif choice == '19':
-            print("Exiting program...")
+            print("Exiting program..")
             break
         else:
             print("Invalid choice! Please choose a number between 1 and 19.")
