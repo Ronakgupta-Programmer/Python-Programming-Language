@@ -1,4 +1,6 @@
 import random
+import string
+import datetime
 
 def random_integer():
     a = int(input("Enter the minimum value: "))
@@ -66,6 +68,27 @@ def random_weighted_choice():
     weights = list(map(int, input("Enter weights for these items separated by commas: ").split(',')))
     print("Weighted random choice:", random.choices(items, weights=weights, k=1)[0])
 
+def random_string(length):
+    letters = string.ascii_letters  # Includes both uppercase and lowercase
+    return ''.join(random.choice(letters) for i in range(length))
+
+def random_unique_sample():
+    sample_list = input("Enter a list of items separated by commas: ").split(',')
+    k = int(input("Enter number of unique samples to select: "))
+    if k > len(sample_list):
+        print("Sample size must be less than or equal to the list size.")
+    else:
+        print("Unique random sample from list:", random.sample(sample_list, k))
+
+def random_date():
+    start_date = datetime.date(2000, 1, 1)
+    end_date = datetime.date(2024, 12, 31)
+    time_between = end_date - start_date
+    days_between = time_between.days
+    random_number_of_days = random.randint(0, days_between)
+    random_date = start_date + datetime.timedelta(days=random_number_of_days)
+    print("Random date between 2000-01-01 and 2024-12-31:", random_date)
+
 def random_demo():
     while True:
         print("\nChoose a random function:")
@@ -83,9 +106,12 @@ def random_demo():
         print("12. Random Normal Distribution")
         print("13. Random Integer Choice")
         print("14. Random Weighted Choice")
-        print("15. Exit")
+        print("15. Random String")
+        print("16. Random Unique Sample")
+        print("17. Random Date")
+        print("18. Exit")
 
-        choice = input("Enter your choice (1-15): ")
+        choice = input("Enter your choice (1-18): ")
         
         if choice == '1':
             random_integer()
@@ -116,6 +142,13 @@ def random_demo():
         elif choice == '14':
             random_weighted_choice()
         elif choice == '15':
+            length = int(input("Enter the length of the random string: "))
+            print("Random String:", random_string(length))
+        elif choice == '16':
+            random_unique_sample()
+        elif choice == '17':
+            random_date()
+        elif choice == '18':
             print("Exiting...")
             break
         else:
