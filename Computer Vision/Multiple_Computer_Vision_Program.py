@@ -267,11 +267,6 @@ class CVApp:
         cap.release()
         cv2.destroyAllWindows()
 
-
-
-
-
-
     def start_emotion_detection(self):
         if self.cap is None:
             self.cap = cv2.VideoCapture(0)
