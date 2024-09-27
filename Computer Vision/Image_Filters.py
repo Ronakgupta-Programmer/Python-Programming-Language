@@ -58,7 +58,6 @@ class FilterApp:
             success, img = cap.read()
             if not success:
                 break
-
             blurred = cv2.GaussianBlur(img, (15, 15), 0)
             cv2.imshow("Blurred", blurred)
 
